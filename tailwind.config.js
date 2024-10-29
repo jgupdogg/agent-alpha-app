@@ -22,6 +22,9 @@ module.exports = {
       width: {
         'screen': '100vw', // Full width of the screen
       },
+      animation: {
+        fadeIn: 'fadeIn 0.3s ease-out forwards',
+      },
     },
   },
   plugins: [],
