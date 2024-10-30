@@ -1,20 +1,20 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-agentalpha-dev-5423e-authRole",
-      "UnauthRoleArn": "arn:aws:iam::183295431558:role/amplify-agentalpha-dev-5423e-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::183295431558:role/amplify-agentalpha-dev-5423e-authRole",
+      "AuthRoleName": "amplify-agentalpha-dev-8d892-authRole",
+      "UnauthRoleArn": "arn:aws:iam::183295431558:role/amplify-agentalpha-dev-8d892-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::183295431558:role/amplify-agentalpha-dev-8d892-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-agentalpha-dev-5423e-deployment",
-      "UnauthRoleName": "amplify-agentalpha-dev-5423e-unauthRole",
-      "StackName": "amplify-agentalpha-dev-5423e",
-      "StackId": "arn:aws:cloudformation:us-east-1:183295431558:stack/amplify-agentalpha-dev-5423e/e5311750-9604-11ef-8f4e-0e6f16ab4627",
-      "AmplifyAppId": "d2uz5jmakrbyl8"
+      "DeploymentBucketName": "amplify-agentalpha-dev-8d892-deployment",
+      "UnauthRoleName": "amplify-agentalpha-dev-8d892-unauthRole",
+      "StackName": "amplify-agentalpha-dev-8d892",
+      "StackId": "arn:aws:cloudformation:us-east-1:183295431558:stack/amplify-agentalpha-dev-8d892/b33463d0-96ca-11ef-b231-0affdc8be2f5",
+      "AmplifyAppId": "d18qrrz5fmpzed"
     },
     "categories": {
       "hosting": {
         "amplifyhosting": {
-          "appId": "d2uz5jmakrbyl8",
+          "appId": "d18qrrz5fmpzed",
           "type": "manual"
         }
       }
