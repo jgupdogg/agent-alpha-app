@@ -152,7 +152,6 @@ const Modal = ({ item, onClose }) => {
               className="w-16 h-16 object-contain"
               onError={(e) => {
                 e.target.onerror = null;
-                e.target.src = '/path/to/default/image.png'; // Replace with your default image path
               }}
             />
             {/* Symbol */}

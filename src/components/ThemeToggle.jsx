@@ -11,8 +11,8 @@ const ThemeToggle = () => {
       checked={theme === 'dark'}
       onChange={toggleTheme}
       size={24}
-      sunColor="#FBBF24" // Bright yellow for sun
-      moonColor="#2D3748" // Dark grey for moon
+      sunColor="#FBBF24"
+      moonColor="#2D3748" 
     />
   );
 };
