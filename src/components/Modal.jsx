@@ -20,21 +20,20 @@ const Modal = ({ item, onClose }) => {
     }
   };
 
-  // Function to process summary text into bullet points with hyperlinks
   const processSummary = (summary, articleIds) => {
     // Remove 'Summary: ' prefix if present
     let processed = summary.replace(/^Summary:\s*/, '');
-
-    // Split into sentences starting with '-' and ending with '(Source: ID)'
+  
+    // Split into sentences ending with '(Source: ID)'
     const regex = /-\s.*?\(Source:\s*(\w+)\)/gs;
     const matches = processed.match(regex) || [];
-
+  
     // Process each match
     const items = matches.map((summaryItem) => {
       // Extract the article ID from the source
       const match = /\(Source:\s*(\w+)\)/.exec(summaryItem);
       const articleId = match ? match[1] : null;
-
+  
       // Replace '(Source: ID)' with site name and hyperlink
       if (articleId && articleIds && articleIds[articleId]) {
         const { url, site } = articleIds[articleId];
@@ -42,15 +41,17 @@ const Modal = ({ item, onClose }) => {
           `(Source: ${articleId})`,
           `(Source: <a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-500 underline">${site}</a>)`
         );
+      } else {
+        // Handle unmatched IDs if necessary
+        summaryItem = summaryItem.replace(`(Source: ${articleId})`, '(Source: Unknown)');
       }
-
+  
       // Remove the leading '- ' and sanitize the HTML
       return DOMPurify.sanitize(summaryItem.trim().substring(2));
     });
-
+  
     return items;
   };
-
   // Ensure that the item has the necessary data
   if (!item || !item.metadata) {
     return null;
